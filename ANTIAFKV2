@@ -1,0 +1,182 @@
+-- إعدادات الواجهة
+local ui = Instance.new("ScreenGui")
+ui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- إنشاء القوائم
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 200, 0, 300)
+mainFrame.Position = UDim2.new(0, 0, 1, -300)
+mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+mainFrame.Parent = ui
+
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, 0, 0, 50)
+titleLabel.Text = "AntiAFK - من صنع فارس و تيم FO"
+titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+titleLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+titleLabel.Parent = mainFrame
+
+-- زر الإعدادات
+local settingsButton = Instance.new("TextButton")
+settingsButton.Size = UDim2.new(1, 0, 0, 50)
+settingsButton.Position = UDim2.new(0, 0, 0, 50)
+settingsButton.Text = "Settings"
+settingsButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+settingsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+settingsButton.Parent = mainFrame
+
+-- زر العودة إلى القائمة الرئيسية
+local backButton = Instance.new("TextButton")
+backButton.Size = UDim2.new(1, 0, 0, 50)
+backButton.Position = UDim2.new(0, 0, 0, 100)
+backButton.Text = "Back to Main"
+backButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+backButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+backButton.Visible = false
+backButton.Parent = mainFrame
+
+-- صفحة الإعدادات
+local settingsFrame = Instance.new("Frame")
+settingsFrame.Size = UDim2.new(1, 0, 1, 0)
+settingsFrame.Position = UDim2.new(0, 0, 0, 50)
+settingsFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+settingsFrame.Visible = false
+settingsFrame.Parent = mainFrame
+
+-- زر تغيير الألوان
+local rainbowButton = Instance.new("TextButton")
+rainbowButton.Size = UDim2.new(1, 0, 0, 50)
+rainbowButton.Position = UDim2.new(0, 0, 0, 0)
+rainbowButton.Text = "Rainbow"
+rainbowButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+rainbowButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+rainbowButton.Parent = settingsFrame
+
+-- زر إزالة التأخير
+local removeLagButton = Instance.new("TextButton")
+removeLagButton.Size = UDim2.new(1, 0, 0, 50)
+removeLagButton.Position = UDim2.new(0, 0, 0, 50)
+removeLagButton.Text = "Remove Lag"
+removeLagButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+removeLagButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+removeLagButton.Parent = settingsFrame
+
+-- زر الطيران
+local flyButton = Instance.new("TextButton")
+flyButton.Size = UDim2.new(1, 0, 0, 50)
+flyButton.Position = UDim2.new(0, 0, 0, 100)
+flyButton.Text = "Fly"
+flyButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+flyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+flyButton.Parent = settingsFrame
+
+-- أزرار تغيير الألوان
+local greenButton = Instance.new("TextButton")
+greenButton.Size = UDim2.new(1, 0, 0, 50)
+greenButton.Position = UDim2.new(0, 0, 0, 150)
+greenButton.Text = "Green"
+greenButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+greenButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+greenButton.Parent = settingsFrame
+
+local redButton = Instance.new("TextButton")
+redButton.Size = UDim2.new(1, 0, 0, 50)
+redButton.Position = UDim2.new(0, 0, 0, 200)
+redButton.Text = "Red"
+redButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+redButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+redButton.Parent = settingsFrame
+
+local yellowButton = Instance.new("TextButton")
+yellowButton.Size = UDim2.new(1, 0, 0, 50)
+yellowButton.Position = UDim2.new(0, 0, 0, 250)
+yellowButton.Text = "Yellow"
+yellowButton.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+yellowButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+yellowButton.Parent = settingsFrame
+
+local blueButton = Instance.new("TextButton")
+blueButton.Size = UDim2.new(1, 0, 0, 50)
+blueButton.Position = UDim2.new(0, 0, 0, 300)
+blueButton.Text = "Blue"
+blueButton.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+blueButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+blueButton.Parent = settingsFrame
+
+-- زر face bang
+local faceBangButton = Instance.new("TextButton")
+faceBangButton.Size = UDim2.new(1, 0, 0, 50)
+faceBangButton.Position = UDim2.new(0, 0, 0, 350)
+faceBangButton.Text = "Face Bang"
+faceBangButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+faceBangButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+faceBangButton.Parent = settingsFrame
+
+-- نص التحقق من عمل AntiAFK
+local statusLabel = Instance.new("TextLabel")
+statusLabel.Size = UDim2.new(1, 0, 0, 50)
+statusLabel.Position = UDim2.new(0, 0, 1, -50)
+statusLabel.Text = "AntiAFK يعمل"
+statusLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+statusLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+statusLabel.Parent = mainFrame
+
+-- إضافة دعم السحب لتحريك القوائم
+local dragging = false
+local dragStart
+local startPos
+
+local function updateDrag(input)
+    local delta = input.Position - dragStart
+    mainFrame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+end
+
+mainFrame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainFrame.Position
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+mainFrame.InputChanged:Connect(function(input)
+    if dragging and input.UserInputType == Enum.UserInputType.Touch then
+        updateDrag(input)
+    end
+end)
+
+-- سكربت AntiAFK
+local antiAFK = Instance.new("RemoteEvent")
+antiAFK.Name = "AntiAFK"
+antiAFK.Parent = game.Players.LocalPlayer.PlayerGui
+
+-- Function to activate antiAFK
+local function activateAntiAFK()
+    while true do
+        game:GetService("Players").LocalPlayer.Idled:Connect(function()
+            game:GetService("Players").LocalPlayer:LoadCharacter()
+        end)
+        wait(60)
+    end
+end
+
+-- Function to remove lag
+local function removeLag()
+    loadstring(game:HttpGet("https://pastebin.com/raw/DYdj2nD1"))()
+end
+
+-- Function to enable flying
+local function enableFly()
+    loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+end
+
+-- Function to change colors to rainbow
+local function activateRainbow()
+    local tweenService = game:GetService("TweenService")
+    local goal = {BackgroundColor3 = Color3.fromHSV(tick() % 1, 1, 1)}
+    local tween = tweenService:Create
